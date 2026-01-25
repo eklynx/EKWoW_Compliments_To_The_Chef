@@ -1,0 +1,8 @@
+## Interface: 120000
+## Title: Compliments To the Chef
+## Author: EKLynx
+## Version 0.1.1a
+## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
+
+main.lua
+settings.lua

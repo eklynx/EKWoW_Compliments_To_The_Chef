@@ -5,9 +5,6 @@ local eatingBox
 -- #### Helpers
 -- Function to load settings into the UI
 local function LoadSettings()
-   	print("Loaded eating text:", chefText_Eating)
-   	print("Loaded well fed text:", chefText_Fed)
-    	
     eatingBox:SetText(chefText_Eating or "NIL")
 	wellFedBox:SetText(chefText_Fed or "NIL")
 --    activeCheckbox:SetChecked(MyAddonDB.active or false)
@@ -66,7 +63,7 @@ saveButton:SetScript("OnClick", function()
     -- Save the values (you'll need to implement your own SavedVariables)
     chefText_Eating = eatingBox:GetText()
     chefText_Fed = wellFedBox:GetText()
-    print("Settings saved!")
+    print("CttC: Settings saved!")
 end)
 
 
@@ -77,7 +74,7 @@ revertButton:SetPoint("LEFT", saveButton, "RIGHT", 10, 0)
 revertButton:SetText("Revert")
 revertButton:SetScript("OnClick", function()
     LoadSettings()
-    print("Settings reverted!")
+    print("CttC: Settings reverted!")
 end)
 
 

@@ -33,25 +33,29 @@ local eatingId = nil
 local function handleAuraChanged(unit, info)
 	if not InCombatLockdown() and info.addedAuras then
 		for _, aura in pairs(info.addedAuras) do
-			if aura.name == spellName_eating then
-				sayTheThing(chefText_Eating)
-				eatingId = aura.auraInstanceID
-				wellFedId = nil
-			elseif not wellFedId and eatingId and aura.name == spellName_well_fed then
-				sayTheThing(chefText_Fed)
-				wellFedId = aura.auraInstanceID
-			end -- check aura names
+			if canaccessvalue(aura.name) then
+				local auraName = aura.name
+				if auraName == spellName_eating then
+					sayTheThing(chefText_Eating)
+					eatingId = aura.auraInstanceID
+					wellFedId = nil
+				elseif not wellFedId and eatingId and auraName == spellName_well_fed then
+					sayTheThing(chefText_Fed)
+					wellFedId = aura.auraInstanceID
+				end -- check aura names
+			end -- end canaccessvalue(aura.name)
 		end -- for aura in auras
 	end -- info addedAuras
 	
-	if not InCombatLockdown() and info.updatedAuraInstanceIDs then
+	if info.updatedAuraInstanceIDs then
 		for _, auraId in pairs(info.updatedAuraInstanceIDs) do
 			aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
-
-			if eatingId and aura.name == spellName_well_fed and wellFedId ~= auraId then
-				sayTheThing(chefText_Fed)
-				wellFedId = auraId
-			end -- check aura names
+			if not InCombatLockdown() and canaccessvalue(aura.name) then 
+				if eatingId and aura.name == spellName_well_fed and wellFedId ~= auraId then
+					sayTheThing(chefText_Fed)
+					wellFedId = auraId
+				end -- check aura names
+    		end -- end canaccessvalue(aura.name)
 		end -- for aura in updatedAuraInstanceIDs
 	end -- if info.updatedAuraInstanceIDs
 		

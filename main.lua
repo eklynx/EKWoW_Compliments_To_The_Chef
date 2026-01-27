@@ -31,7 +31,7 @@ local wellFedId = nil
 local eatingId = nil
 
 local function handleAuraChanged(unit, info)
-	if info.addedAuras then
+	if not InCombatLockdown() and info.addedAuras then
 		for _, aura in pairs(info.addedAuras) do
 			if aura.name == spellName_eating then
 				sayTheThing(chefText_Eating)
@@ -44,7 +44,7 @@ local function handleAuraChanged(unit, info)
 		end -- for aura in auras
 	end -- info addedAuras
 	
-	if info.updatedAuraInstanceIDs then
+	if not InCombatLockdown() and info.updatedAuraInstanceIDs then
 		for _, auraId in pairs(info.updatedAuraInstanceIDs) do
 			aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
 

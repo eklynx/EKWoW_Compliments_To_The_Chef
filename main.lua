@@ -50,7 +50,7 @@ local function handleAuraChanged(unit, info)
 	if info.updatedAuraInstanceIDs then
 		for _, auraId in pairs(info.updatedAuraInstanceIDs) do
 			aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
-			if not InCombatLockdown() and canaccessvalue(aura.name) then 
+			if not InCombatLockdown() and aura and canaccessvalue(aura.name) then 
 				if eatingId and aura.name == spellName_well_fed and wellFedId ~= auraId then
 					sayTheThing(chefText_Fed)
 					wellFedId = auraId

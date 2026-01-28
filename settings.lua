@@ -28,23 +28,24 @@ eatingLabel:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -20)
 eatingLabel:SetText("Eating...")
 
 -- Eating text box
-eatingBox = CreateFrame("EditBox", "MyAddonEatingBox", SettingsPanel, "InputBoxTemplate")
+eatingBox = CreateFrame("EditBox", "CttCEatingBox", SettingsPanel, "InputBoxTemplate")
 eatingBox:SetSize(500, 20)
-eatingBox:SetPoint("LEFT", eatingLabel, "RIGHT", 10, 0)
+eatingBox:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 90, -15)
 eatingBox:SetAutoFocus(false)
 eatingBox:SetMaxLetters(250)
 
 -- Well Fed label
 local wellFedLabel = SettingsPanel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-wellFedLabel:SetPoint("TOPLEFT", eatingLabel, "BOTTOMLEFT", 0, -30)
+wellFedLabel:SetPoint("TOPLEFT", eatingLabel, "BOTTOMLEFT", 0, -20)
 wellFedLabel:SetText("Well Fed...")
 
 -- Well Fed text box
-wellFedBox = CreateFrame("EditBox", "MyAddonWellFedBox", SettingsPanel, "InputBoxTemplate")
+wellFedBox = CreateFrame("EditBox", "CttCWellFedBox", SettingsPanel, "InputBoxTemplate")
 wellFedBox:SetSize(500, 20)
-wellFedBox:SetPoint("LEFT", wellFedLabel, "RIGHT", 10, 0)
+wellFedBox:SetPoint("TOPLEFT", eatingLabel, "BOTTOMLEFT", 90, -15)
 wellFedBox:SetAutoFocus(false)
-wellFedBox:SetMaxLetters(250)
+wellFedBox:SetMaxLetters(820)
+
 
 ---- Active checkbox
 --local activeCheckbox = CreateFrame("CheckButton", "MyAddonActiveCheckbox", SettingsPanel, "UICheckButtonTemplate")

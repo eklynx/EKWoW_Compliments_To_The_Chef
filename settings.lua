@@ -79,6 +79,17 @@ revertButton:SetScript("OnClick", function()
 end)
 
 
+
+-- Copyright String
+local githubLabel = SettingsPanel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+githubLabel:SetPoint("BOTTOMRIGHT", 0, 20)
+githubLabel:SetText("https://github.com/eklynx/EKWoW_Compliments_To_The_Chef")
+
+local creditsLabel = SettingsPanel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+creditsLabel:SetPoint("BOTTOMRIGHT", githubLabel, "TOPRIGHT", 0, 15)
+creditsLabel:SetText("'Compliments to the Chef' created by Edgars \"EKLynx\" Klepers. Based on a WeakAura, requested by guild.")
+
+
 -- Load saved settings when panel is shown
 SettingsPanel:SetScript("OnShow", LoadSettings)
 

@@ -1,7 +1,7 @@
-## Interface: 120000
+## Interface: 120000, 120001
 ## Title: Compliments To the Chef
 ## Author: EKLynx
-## Version 0.1.5a
+## Version 0.1.6-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 

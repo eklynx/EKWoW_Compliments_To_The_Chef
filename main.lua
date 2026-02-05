@@ -1,16 +1,17 @@
+
+-- addon-level variables
+local _, addonTable = ...;
+
 -- **** Constants ****
 
-local spellName_eating = "Food" 
-local spellName_well_fed = "Well Fed"
-
-
 if not chefText_Eating then
-	chefText_Eating = "That looks tasty!"
+	chefText_Eating = addonTable.locStrTable[addonTable.strKey_defaultEating]
 end 
 
 if not chefText_Fed then
-	chefText_Fed = "That's really hitting the spot!"
+	chefText_Fed = addonTable.locStrTable[addonTable.strKey_defaultWellFed]
 end
+
 
 
 
@@ -27,10 +28,13 @@ end -- function sayTheTing
 
 -- **** State ****
 
-local wellFedId = nil
-local eatingId = nil
+local wellFedId
+local eatingId
 
 local function handleAuraChanged(unit, info)
+	local spellName_eating = addonTable.locStrTable[addonTable.strKey_spellNameEating]
+	local spellName_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameWellFed]
+
 	if unit == "player" then
 		if not InCombatLockdown() and info.addedAuras then
 			for _, aura in pairs(info.addedAuras) do
@@ -74,7 +78,7 @@ end -- handleAuraChanged
 
 
 
-local function OnEvent(self, event, unit, info)
+local function OnEvent(_, event, unit, info)
   if event == "UNIT_AURA" or event == "PLAYER_ENTERING_WORLD" then
   	handleAuraChanged(unit, info)
   end -- "UNIT_AURA"

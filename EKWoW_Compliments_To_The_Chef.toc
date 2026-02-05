@@ -1,14 +1,17 @@
 ## Interface: 120000, 120001
 ## Title: Compliments to the Chef
 ## Title-deDE: Komplimente an den Koch
+## Title-esES: Felicitaciones al Chef
+## Title-esMX: Felicitaciones al Chef
 ## TItle-frFR: Compliments au chef
 ## Author: EKLynx
-## Version 0.2.0-beta
+## Version 0.2.1-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 
 localization.core.lua
 localization.frFR.lua
 localization.deDE.lua
+localization.esES.lua
 main.lua
 settings.lua

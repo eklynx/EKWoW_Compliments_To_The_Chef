@@ -5,7 +5,7 @@
 ## Title-esMX: Felicitaciones al Chef
 ## TItle-frFR: Compliments au chef
 ## Author: EKLynx
-## Version 0.2.0-beta
+## Version 0.2.1-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 

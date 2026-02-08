@@ -7,10 +7,11 @@
 ## Title-koKR: 요리사에게 칭찬을
 ## Title-ptBR: Elogios ao Chef
 ## Title-ptPT: Elogios ao Chef
+## Title-ruRU: Комплименты шеф-повару
 ## Title-zhCN: 向大厨致敬
 ## Title-zhTW: 向大廚致敬
 ## Author: EKLynx
-## Version 0.2.4-beta
+## Version: 0.2.5-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 
@@ -22,5 +23,6 @@ localization.ptBR.lua
 localization.zhCN.lua
 localization.zhTW.lua
 localization.koKR.lua
+localization.ruRU.lua
 main.lua
 settings.lua

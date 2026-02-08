@@ -4,12 +4,13 @@
 ## Title-esES: Felicitaciones al Chef
 ## Title-esMX: Felicitaciones al Chef
 ## Title-frFR: Compliments au chef
+## Title-koKR: 요리사에게 칭찬을
 ## Title-ptBR: Elogios ao Chef
 ## Title-ptPT: Elogios ao Chef
 ## Title-zhCN: 向大厨致敬
 ## Title-zhTW: 向大廚致敬
 ## Author: EKLynx
-## Version 0.2.0-beta
+## Version 0.2.4-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 
@@ -20,5 +21,6 @@ localization.esES.lua
 localization.ptBR.lua
 localization.zhCN.lua
 localization.zhTW.lua
+localization.koKR.lua
 main.lua
 settings.lua

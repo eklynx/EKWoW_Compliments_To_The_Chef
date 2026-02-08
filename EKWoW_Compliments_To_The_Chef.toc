@@ -3,9 +3,10 @@
 ## Title-deDE: Komplimente an den Koch
 ## Title-esES: Felicitaciones al Chef
 ## Title-esMX: Felicitaciones al Chef
-## TItle-frFR: Compliments au chef
+## Title-frFR: Compliments au chef
+## Title-ptBR: Elogios ao Chef
+## Title-ptPT: Elogios ao Chef
 ## Author: EKLynx
-## Version 0.2.2-beta
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 
@@ -13,5 +14,6 @@ localization.core.lua
 localization.frFR.lua
 localization.deDE.lua
 localization.esES.lua
+localization.ptBR.lua
 main.lua
 settings.lua

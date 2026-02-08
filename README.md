@@ -1,8 +1,12 @@
 # Compliments to the Chef 
 ###### an EKLynx quick World of Warcraft add-on
 
+#### Summary
+A simple add-on that says something when you eat and says something else when you are well fed!
 
-Back in the days of WeakAruas, someone created an aura that did something small.  It was adapted into something that can be silly but useful, and most importantly it was popular. The one that we used in the guild was called ["Nom Nom"](https://wago.io/EMhP4uryY). Many others created clones that changes what was said, and life was just a bit more entertaining when raiding. But with the great add-on cleansing of 2026 WeakAuras rode off in to the sunset.  But this small thing was a popular request and seemed manageable for a small add-on by itself, and this is the result!
+#### Description
+
+Back in the days of WeakAuras, someone created an aura that did something small.  It was adapted into something that can be silly but useful, and most importantly it was popular. The one that we used in the guild was called ["Nom Nom"](https://wago.io/EMhP4uryY). Many others created clones that changes what was said, and life was just a bit more entertaining when raiding. But with the great add-on cleansing of 2026 WeakAuras rode off in to the sunset.  But this small thing was a popular request and seemed manageable for a small add-on by itself, and this is the result!
 
 This add-on does two simple things.
 1. When you start eating, you say something

@@ -41,11 +41,11 @@ local function handleAuraChanged(unit, info)
 				if canaccessvalue(aura.name) then
 					local auraName = aura.name
 					if auraName == spellName_eating then
-						sayTheThing(chefText_Eating)
+						if chefText_Eating then sayTheThing(chefText_Eating) end
 						eatingId = aura.auraInstanceID
 						wellFedId = nil
 					elseif not wellFedId and eatingId and auraName == spellName_well_fed then
-						sayTheThing(chefText_Fed)
+						if chefText_Fed then sayTheThing(chefText_Fed) end
 						wellFedId = aura.auraInstanceID
 					end -- check aura names
 				end -- end canaccessvalue(aura.name)
@@ -57,7 +57,7 @@ local function handleAuraChanged(unit, info)
 				aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
 				if not InCombatLockdown() and aura and canaccessvalue(aura.name) then 
 					if eatingId and aura.name == spellName_well_fed and wellFedId ~= auraId then
-						sayTheThing(chefText_Fed)
+						if chefText_Fed then sayTheThing(chefText_Fed) end
 						wellFedId = auraId
 					end -- check aura names
 				end -- end canaccessvalue(aura.name)

@@ -10,7 +10,7 @@ Back in the days of WeakAuras someone created an aura that did something small. 
 
 This add-on does two simple things.
 1. When you start eating, you say something
-2. When you gain or refresh a well-fed buff, you say something else.
+2. When you gain or refresh a 'Well Fed' buff, you say something else.
 
 That's it!
 

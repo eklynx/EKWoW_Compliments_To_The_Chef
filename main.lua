@@ -32,9 +32,6 @@ local wellFedId
 local eatingId
 
 local function handleAuraChanged(unit, info)
-	if not addonTable or not addonTable.locStrTable then
-		return
-	end
 	local spellName_eating = addonTable.locStrTable[addonTable.strKey_spellNameEating]
 	local spellName_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameWellFed]
 

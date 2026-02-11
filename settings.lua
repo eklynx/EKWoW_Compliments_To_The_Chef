@@ -6,6 +6,9 @@ local eatingBox, eatingLabel
 local wellFedBox, wellFedLabel
 
 
+if not addonTable or not addonTable.locStrTable then
+    return
+end
 
 local rightPadding = 16
 local minBoxWidth = 200

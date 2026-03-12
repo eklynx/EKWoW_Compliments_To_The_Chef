@@ -47,7 +47,7 @@ local function handleAuraChanged(unit, info)
 						if chefText_Eating then sayTheThing(chefText_Eating) end
 						eatingId = aura.auraInstanceID
 						wellFedId = nil
-					elseif not wellFedId and eatingId and auraName == spellName_well_fed then
+					elseif not wellFedId and eatingId and string.match(auraName,spellName_well_fed) then
 						if chefText_Fed then sayTheThing(chefText_Fed) end
 						wellFedId = aura.auraInstanceID
 					end -- check aura names

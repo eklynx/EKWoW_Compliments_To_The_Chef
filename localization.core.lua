@@ -16,6 +16,7 @@ addonTable.strKey_revert = "Revert"
 -- Spell names
 addonTable.strKey_spellNameEating = "Food"
 addonTable.strKey_spellNameWellFed = "Well Fed"
+addonTable.strKey_spellNameHeartyWellFed = "Hearty Well Fed"
 addonTable.locStrTable = {}
 
 

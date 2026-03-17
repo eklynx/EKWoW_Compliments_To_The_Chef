@@ -15,6 +15,18 @@ end
 
 
 
+
+
+
+-- **** State ****
+
+local wellFedId
+local eatingId
+local spellName_eating
+local spellName_well_fed
+local spellName_hearty_well_fed
+
+
 -- **** Helper Methods ****
 local function sayTheThing(message)
 	if IsInInstance() then
@@ -24,30 +36,35 @@ local function sayTheThing(message)
 	end -- if IsInInstance
 end -- function sayTheTing
 
+local function isEatingSpell(spellName)
+	return spellName == spellName_eating
+end
+
+local function isWellFedSpell(spellName)
+	return spellName == spellName_well_fed or spellName == spellName_hearty_well_fed
+end
 
 
--- **** State ****
-
-local wellFedId
-local eatingId
+-- **** Main Logic ****
 
 local function handleAuraChanged(unit, info)
 	if not addonTable or not addonTable.locStrTable then
 		return
 	end
-	local spellName_eating = addonTable.locStrTable[addonTable.strKey_spellNameEating]
-	local spellName_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameWellFed]
+	spellName_eating = addonTable.locStrTable[addonTable.strKey_spellNameEating]
+	spellName_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameWellFed]
+	spellName_hearty_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed]
 
 	if unit == "player" then
 		if not InCombatLockdown() and info.addedAuras then
 			for _, aura in pairs(info.addedAuras) do
 				if canaccessvalue(aura.name) then
 					local auraName = aura.name
-					if auraName == spellName_eating then
+					if isEatingSpell(auraName) then
 						if chefText_Eating then sayTheThing(chefText_Eating) end
 						eatingId = aura.auraInstanceID
 						wellFedId = nil
-					elseif not wellFedId and eatingId and string.match(auraName,spellName_well_fed) then
+					elseif not wellFedId and eatingId and isWellFedSpell(auraName) then
 						if chefText_Fed then sayTheThing(chefText_Fed) end
 						wellFedId = aura.auraInstanceID
 					end -- check aura names
@@ -59,7 +76,7 @@ local function handleAuraChanged(unit, info)
 			for _, auraId in pairs(info.updatedAuraInstanceIDs) do
 				aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
 				if not InCombatLockdown() and aura and canaccessvalue(aura.name) then 
-					if eatingId and aura.name == spellName_well_fed and wellFedId ~= auraId then
+					if eatingId and isWellFedSpell(auraName) and wellFedId ~= auraId then
 						if chefText_Fed then sayTheThing(chefText_Fed) end
 						wellFedId = auraId
 					end -- check aura names
@@ -77,7 +94,6 @@ local function handleAuraChanged(unit, info)
 		end -- if info.removedAuraInstanceIDs
 	end -- if unit == player
 end -- handleAuraChanged
-
 
 
 

@@ -16,4 +16,5 @@ if GetLocale() == "esES" or GetLocale() == "esMX" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Comida"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Bien alimentado"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Copiosamente bien alimentado"
 end

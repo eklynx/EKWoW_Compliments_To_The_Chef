@@ -16,4 +16,5 @@ if GetLocale() == "deDE" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Essen"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Satt"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Zünftig satt"
 end

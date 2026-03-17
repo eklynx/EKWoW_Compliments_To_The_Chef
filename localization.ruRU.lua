@@ -16,4 +16,5 @@ if GetLocale() == "ruRU" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Еда"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Сытость"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Полная сытость"
 end

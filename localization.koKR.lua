@@ -16,4 +16,5 @@ if GetLocale() == "koKR" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "음식"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "포만감"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "든든한 포만감"
 end

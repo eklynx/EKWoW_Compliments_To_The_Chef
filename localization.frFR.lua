@@ -13,8 +13,8 @@ if GetLocale() == "frFR" then
     addonTable.locStrTable[addonTable.strKey_save] = "Enregistrer"
     addonTable.locStrTable[addonTable.strKey_revert] = "Annuler"
 
-
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Nourriture"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Personnage bien nourri"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Personnage généreusement bien nourri"
 end

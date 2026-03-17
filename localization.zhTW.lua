@@ -16,4 +16,5 @@ if GetLocale() == "zhTW" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "食物"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "充分進食"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "澎湃充分進食"
 end

@@ -16,4 +16,5 @@ if GetLocale() == "ptBR" or GetLocale() == "ptPT" then
     -- Spell names
     addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Comida"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Bem Alimentado"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Substancialmente Bem Alimentado"
 end

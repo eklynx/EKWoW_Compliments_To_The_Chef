@@ -14,7 +14,8 @@ if GetLocale() == "deDE" then
     addonTable.locStrTable[addonTable.strKey_revert] = "Zurücksetzen"
 
     -- Spell names
-    addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Essen"
+    addonTable.locStrTable[addonTable.strKey_spellNameFood] = "Essen"
+    addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink] = "Speis & Trank"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Satt"
     addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Zünftig satt"
 end

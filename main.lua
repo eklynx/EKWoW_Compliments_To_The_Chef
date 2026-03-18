@@ -22,7 +22,8 @@ end
 
 local wellFedId
 local eatingId
-local spellName_eating
+local spellName_food
+local spellName_food_and_drink
 local spellName_well_fed
 local spellName_hearty_well_fed
 
@@ -37,7 +38,7 @@ local function sayTheThing(message)
 end -- function sayTheTing
 
 local function isEatingSpell(spellName)
-	return spellName == spellName_eating
+	return spellName == spellName_food or spellName == spellName_food_and_drink
 end
 
 local function isWellFedSpell(spellName)
@@ -51,7 +52,8 @@ local function handleAuraChanged(unit, info)
 	if not addonTable or not addonTable.locStrTable then
 		return
 	end
-	spellName_eating = addonTable.locStrTable[addonTable.strKey_spellNameEating]
+	spellName_food = addonTable.locStrTable[addonTable.strKey_spellNameFood]
+	spellName_food_and_drink = addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink]
 	spellName_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameWellFed]
 	spellName_hearty_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed]
 

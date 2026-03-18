@@ -14,7 +14,8 @@ if GetLocale() == "esES" or GetLocale() == "esMX" then
     addonTable.locStrTable[addonTable.strKey_revert] = "Revertir"
 
     -- Spell names
-    addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Comida"
+    addonTable.locStrTable[addonTable.strKey_spellNameFood] = "Comida"
+    addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink] = "Alimentos y bebidas"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Bien alimentado"
     addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Copiosamente bien alimentado"
 end

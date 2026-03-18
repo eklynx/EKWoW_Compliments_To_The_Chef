@@ -14,7 +14,8 @@ if GetLocale() == "zhTW" then
     addonTable.locStrTable[addonTable.strKey_revert] = "還原"
 
     -- Spell names
-    addonTable.locStrTable[addonTable.strKey_spellNameEating] = "食物"
+    addonTable.locStrTable[addonTable.strKey_spellNameFood] = "食物"
+    addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink] = "食物和飲料"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "充分進食"
     addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "澎湃充分進食"
 end

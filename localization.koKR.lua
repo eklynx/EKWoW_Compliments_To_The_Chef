@@ -14,6 +14,8 @@ if GetLocale() == "koKR" then
     addonTable.locStrTable[addonTable.strKey_revert] = "되돌리기"
 
     -- Spell names
-    addonTable.locStrTable[addonTable.strKey_spellNameEating] = "음식"
+    addonTable.locStrTable[addonTable.strKey_spellNameFood] = "음식"
+    addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink] = "음식과 음료"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "포만감"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "든든한 포만감"
 end

@@ -14,6 +14,8 @@ if GetLocale() == "ruRU" then
     addonTable.locStrTable[addonTable.strKey_revert] = "Отменить"
 
     -- Spell names
-    addonTable.locStrTable[addonTable.strKey_spellNameEating] = "Еда"
+    addonTable.locStrTable[addonTable.strKey_spellNameFood] = "Еда"
+    addonTable.locStrTable[addonTable.strKey_spellNameFoodAndDrink] = "Еда и напитки"
     addonTable.locStrTable[addonTable.strKey_spellNameWellFed] = "Сытость"
+    addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed] = "Полная сытость"
 end

@@ -1,4 +1,4 @@
-## Interface: 120007, 120100
+## Interface: 120100
 ## Title: Compliments to the Chef
 ## Title-deDE: Komplimente an den Koch
 ## Title-esES: Felicitaciones al Chef
@@ -11,7 +11,7 @@
 ## Title-zhCN: 向大厨致敬
 ## Title-zhTW: 向大廚致敬
 ## Author: EKLynx
-## Version: 1.0.3
+## Version: 1.0.4
 ## X-Wago-ID: rNkyg4Ka
 ## SavedVariablesPerCharacter: chefText_Eating, chefText_Fed
 

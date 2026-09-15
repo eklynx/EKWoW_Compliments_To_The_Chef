@@ -31,7 +31,7 @@ local spellName_hearty_well_fed
 -- **** Helper Methods ****
 local function sayTheThing(message)
 	if IsInInstance() then
-		SendChatMessage(message, "SAY")
+		C_ChatInfo.SendChatMessage(message, "SAY")
 	else
 		print(message)
 	end -- if IsInInstance
@@ -58,7 +58,7 @@ local function handleAuraChanged(unit, info)
 	spellName_hearty_well_fed = addonTable.locStrTable[addonTable.strKey_spellNameHeartyWellFed]
 
 	if unit == "player" then
-		if not InCombatLockdown() and info.addedAuras then
+		if not InCombatLockdown() and info.addedAuras and canaccessvalue(info.addedAuras) then
 			for _, aura in pairs(info.addedAuras) do
 				if canaccessvalue(aura.name) then
 					local auraName = aura.name
@@ -74,7 +74,7 @@ local function handleAuraChanged(unit, info)
 			end -- for aura in auras
 		end -- info addedAuras
 		
-		if info.updatedAuraInstanceIDs then
+		if info.updatedAuraInstanceIDs and canaccessvalue(info.updatedAuraInstanceIDs) then
 			for _, auraId in pairs(info.updatedAuraInstanceIDs) do
 				aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraId)
 				if not InCombatLockdown() and aura and canaccessvalue(aura.name) then 
@@ -86,7 +86,7 @@ local function handleAuraChanged(unit, info)
 			end -- for aura in updatedAuraInstanceIDs
 		end -- if info.updatedAuraInstanceIDs
 			
-		if info.removedAuraInstanceIDs then
+		if info.removedAuraInstanceIDs and canaccessvalue(info.removedAuraInstanceIDs) then
 			for _, auraId in pairs(info.removedAuraInstanceIDs) do
 				if not eatingId and auraId == eatingId then
 					wellFedId = nil
